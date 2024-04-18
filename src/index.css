@@ -200,7 +200,7 @@ background: #f92f18;
   display: flex;
   border-radius: 5px;
   padding: 1rem;
-  margin: 10px auto;
+  margin: 10px;
   background: #f9e90d;
   box-shadow: var(--shadow-1);
   /* width: 29.5%; */
