@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  font-family: "Poppins",Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ 
+  font-weight: 300;
+
+  color-scheme: light dark;
+  /* color: rgba(10, 9, 9, 0.87); */
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+   /* colors */
+   --primary-100: #e2e0ff;
+   --primary-200: #c1beff;
+   --primary-300: #a29dff;
+   --primary-400: #837dff;
+   --primary-500: #645cff;
+   --primary-600: #504acc;
+   --primary-700: #3c3799;
+   --primary-800: #282566;
+   --primary-900: #141233;
+ 
+   /* grey */
+   --grey-50: #f8fafc;
+   --grey-100: #f1f5f9;
+   --grey-200: #e2e8f0;
+   --grey-300: #cbd5e1;
+   --grey-400: #94a3b8;
+   --grey-500: #64748b;
+   --grey-600: #475569;
+   --grey-700: #334155;
+   --grey-800: #1e293b;
+   --grey-900: #0f172a;
+   /* rest of the colors */
+   --black: #222;
+   --white: #fff;
+   --red-light: #f8d7da;
+   --red-dark: #842029;
+   --green-light: #d1e7dd;
+   --green-dark: #0f5132;
+
+   --primary-1 : #146C94;
+   --primary-2 : #124076;
+   --secondary-1 : #AFD3E2;
+   --secondary-2 : #F6F1F1;
+ 
+   --small-text: 0.875rem;
+   --extra-small-text: 0.7em;
+ 
+   /* rest of the vars */
+   --backgroundColor: var(--grey-50);
+   --textColor: var(--grey-900);
+   --borderRadius: 0.25rem;
+   --letterSpacing: 1px;
+   --transition: 0.2s ease-in-out all;
+   --transition--3: 0.3s ease-in-out all;
+   --max-width: 1120px;
+   --fixed-width: 600px;
+ 
+   /* box shadow*/
+   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* body{
+  height: 100vh; 
+} */
+
+html {
+  font-size: 22px;
+ 
+  
+}
+
+html::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 100vh; 
+  width: 100vw; 
+  background-color: #2f74c0;
+}
+
+.heading{
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 30px 0;
+  z-index: 1;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+
+.inputField{
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
+}
+
+
+.inputBox{
+ width: 100%;
+ border-radius: 50px;
+ padding: 20px 30px;
+ font-size: 25px;
+ border: none;
+ transition: 0.2s;
+ box-shadow: var(--shadow-1);
+
+}
+
+.inputBox:focus{
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+
+.inputBtn-submit{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 14px 12px 12px 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: #2f74c0;
+  font-size: 1rem;
+  color: #ffff;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
+
+
+
+}
+
+.inputBtn-submit:hover{
+  background-color: #18497e;
+}
+
+.inputBtn-submit:active{
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.todo, .todos-task, .todos-task-complete{
+  display: flex;
+  flex-direction: column;
+  width: 49.7%;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 6rem;
+  list-style: none;
+  border-radius: var(--borderRadius);
+    /* justify-content: space-evenly; */
+  /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+}
+
+.todos-task{
+background: #2fb2ef;
+}
+
+.todos-task-complete{
+background: #f92f18;
+}
+
+
+.todos-single{
+  display: flex;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 10px auto;
+  background: #f9e90d;
+  box-shadow: var(--shadow-1);
+  /* width: 29.5%; */
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  transition: var(--transition);
+  
+}
+
+.todos-single:hover{
+  transform: scale(1.02);
+}
+
+.todos-span-header{
+  margin: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.todos-single-text{
+  flex: 1;
+  padding: 1rem;
+
+}
+
+.icon{
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+}
+
+.todos-edit{
+
+  height: 3rem;
+  width: 100%;
+  min-width: 60%;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+}
+
+.icon-container{
+  display: flex;
+}
+
+.container-todos{
+  margin-top: 2rem;
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* tablet */
+@media (max-width: 1300px) { 
+  .heading{
+    margin: 12px 0;
+    font-size: 35px;
+  }
+
+  .inputField{
+   width:  95%;
+  }
+
+  .todos{
+    height: 100%;
+    
+  }
+
+ 
+.todos-single{
+
+  /* width: 40%; */
+  width: 95.5%;
+  font-size: 20px;
+  word-break:break-all;
+}
+
+.todos-edit{
+  height: 100%;
+}
+
+}
+
+/* mobile */
+
+@media (max-width: 800px) { 
+
+  
+  .todos-single{
+    width: 90%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+   
+   
+}
+
+.todos-single-text{
+  padding: 1rem;
+  word-break: normal;
+}
+
+.todos-span-header{
+  font-size: 16px;
+}
+
+.icon-container{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.container-todos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todos-task, .todos-task-complete{
+ width: 100%;
+ margin: 1rem;
+}
+
+}
